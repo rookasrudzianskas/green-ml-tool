@@ -1,0 +1,187 @@
+.title {
+	text-align: center;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	top: 20px;
+	z-index: 9999999;
+	color: #FFF;
+}
+.canvas {
+	display: none;
+}
+.camera {
+	width: 100%;
+	height: 100%;
+}
+.camera {
+	background: #000;
+}
+.camera video {
+	/* Make video to at least 100% wide and tall */
+  min-width: 100%; 
+  min-height: 100%; 
+	object-fit: cover!important;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+	opacity: 1;
+}
+.overlay {
+	background: linear-gradient(179.99deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.7) 83.17%), linear-gradient(179.95deg, rgba(0, 0, 0, 0.7) 0.04%, rgba(0, 0, 0, 0) 25.96%);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 9;
+	opacity: .75;
+	pointer-events: none;
+}
+.takephoto {
+	z-index: 9999999999;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 20px;
+	margin: auto;
+	background: transparent;
+	border: none;
+	width: min-content;
+}
+.takephoto:hover {
+	cursor: pointer;
+}
+.image {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.switchcamera {
+	position: absolute;
+	right: 20px;
+	bottom: 30px;
+	z-index: 999999999999;
+	background: none;
+	border: none;
+	width: min-content;
+}
+.switchcamera:hover {
+	cursor: pointer;
+}
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.scanline {
+	z-index: 999999;
+	height: 200px;
+	position: absolute;
+	top: 100px;
+	left: 0px;
+	border-top: 2px dashed #FFFFFF;
+	width: 100%;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+	animation-name: moving;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+	pointer-events: none;
+	will-change: top;
+}
+@keyframes moving {
+	from {
+		top: 10%;
+	}
+	to {
+		top: 85%;
+	}
+}
+.scanarea {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	z-index: 9;
+	margin: auto;
+}
+
+/* close button */
+.goback {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 999999999999;
+	animation-name: fadein;
+	animation-delay: 2s;
+	animation-duration: .25s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+.goback:hover {
+	opacity: .7;
+	cursor: pointer;
+}
+
+/* upload button */
+.upload {
+	position: absolute;
+	left: 20px;
+	bottom: 30px;
+	z-index: 999999999999;
+	width: 48px;
+	height: 48px;
+}
+.upload:hover {
+	opacity: .7;
+	cursor: pointer;
+}
+
+/* preview image */
+.preview {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	object-fit: cover;
+}
+
+.example {
+	position: absolute;
+	z-index: 9999999;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+	opacity: .3;
+}
+
+@media only screen and (max-width: 360px) {
+	.scanarea {
+		width: 90%;
+	}
+}

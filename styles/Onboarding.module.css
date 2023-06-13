@@ -1,0 +1,398 @@
+.onboarding {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+}
+.skip {
+	position: absolute;
+	right: 25px;
+	top: 25px;
+	font-size: 14px;
+	z-index: 999999999;
+}
+.skip:hover {
+	cursor: pointer;
+}
+.image {
+	width: 100%;
+	height: 45%;
+	z-index: 999;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.handright {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 300px;
+	margin: auto;
+	z-index: 2;
+	animation-name: righthand;
+	animation-duration: .8s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	pointer-events: none;
+}
+.handleft {
+	transform: translateX(-170px) rotate(-15deg);
+	position: absolute;
+	width: 300px;
+	left: 0px;
+	bottom: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+	animation-name: lefthand;
+	animation-duration: .8s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	pointer-events: none;
+}
+.robot {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+	width: 120px;
+	z-index: 4;
+	animation-name: robot, pulse;
+	animation-duration: .5s, 3s;
+	animation-delay: 0s, .7s;
+	animation-iteration-count: 1, infinite;
+	animation-timing-function: ease-in-out, ease-in-out;
+	animation-direction: normal, alternate;
+	animation-fill-mode: forwards, forwards;
+	pointer-events: none;
+}
+.smoke {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+	width: 180px;
+	transform-origin: center bottom;
+	animation-name: smoke;
+	animation-duration: .4s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	pointer-events: none;
+}
+.question {
+	position: absolute;
+	margin: auto;
+	transform: translateX(80px) translateY(-100px);
+	right: 0px;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	width: 80px;
+	animation-name: question;
+	animation-duration: .4s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+.trash {
+	position: absolute;
+	z-index: 99999;
+	left: 80px;
+	bottom: 0px;
+	top: 0px;
+	margin: auto;
+	width: 150px;
+	animation-name: trash;
+	animation-duration: .8s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+.trees {
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 280px;
+	animation-name: trees;
+	animation-duration: .8s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+.next {
+	box-shadow: 0px 4px 16px rgba(154, 207, 117, 0.25);
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background: #7DC322;
+	text-align: center;
+	line-height: 50px;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	bottom: 20px;
+	z-index: 9999999;
+}
+.next img {
+	margin-top: 25px;
+}
+.next:hover {
+	cursor: pointer;
+}
+.bottom {
+	height: 45%;
+	bottom: 0px;
+	width: 100%;
+	position: absolute;
+}
+.text {
+	z-index: 4;
+	font-size: 22px;
+	text-align: center;
+	margin-top: 50px!important;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	width: 380px;
+	line-height: 40px;
+	display: block;
+}
+.subtitle {
+	margin-top: 20px!important;
+	display: block;
+	font-size: 16px;
+	color: #8C8C8C;
+	width: 80%;
+	left: 0px;
+	line-height: 25px;
+	right: 0px;
+	margin: auto;
+	text-align: center;
+}
+.progress {
+	z-index: 99999999999;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 20px;
+	margin: auto;
+	width: fit-content;
+}
+.active {
+	height: 7px;
+	border-radius: 30px;
+	background: #000;
+	width: 29px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	margin-right: 5px;
+	transition: all .3s cubic-bezier(.05,.03,.35,1);
+}
+.inactive {
+	height: 7px;
+	width: 15px;
+	border-radius: 30px;
+	background: #D1D1D1;
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+	vertical-align: middle;
+	transition: all .3s cubic-bezier(.05,.03,.35,1);
+}
+.active:hover, .inactive:hover {
+	cursor: pointer;
+}
+.button {
+	box-shadow: 0px 4px 16px rgba(154, 207, 117, 0.25);
+	background: #7DC322;
+	color: #FFF;
+	font-size: 16px;
+	height: 50px;
+	border-radius: 10px;
+	width: calc(100% - 40px);
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+	right: 0px;
+	text-align: center;
+	line-height: 50px;
+}
+.button:hover {
+	cursor: pointer;
+}
+
+/* Fun animations */
+@keyframes righthand {
+	from {
+		transform: translateX(170px) rotate(20deg) translateY(80px);
+	}
+	to {
+		transform: translateX(70px) rotate(0deg) translateY(80px);
+	}
+}
+@keyframes lefthand {
+	from {
+		transform: translateX(-120px) rotate(-15deg) translateY(-50px);
+	}
+	to {
+		transform: translateX(-40px) rotate(0deg) translateY(-50px);
+	}
+}
+@keyframes robot {
+	from {
+		transform: translateY(50px) scale(.95);
+	}
+	to {
+		transform: translateY(-10px) scale(1);
+	}
+}
+@keyframes pulse {
+	from {
+		transform: translateY(-10px);
+	}
+	to {
+		transform: translateY(5px);
+	}
+}
+@keyframes smoke {
+	from {
+		opacity: 0;
+		transform: translateX(4px) scale(.7) translateY(100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(4px) scale(1) translateY(100px);
+	}
+}
+@keyframes question {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes trash {
+	from {
+		transform: translateX(-100px) translateY(80px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0px) translateY(80px);
+		opacity: 1;
+	}
+}
+@keyframes trees {
+	from {
+		transform: translateX(100px) translateY(-20px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0px) translateY(-20px);
+		opacity: 1;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.trash {
+		width: 120px;
+	}
+	.trees {
+		width: 230px;
+	}
+}
+@media only screen and (max-width: 445px) {
+	.handright {
+		width: 250px;
+	}
+	.handleft {
+		width: 250px;
+	}
+}
+@media only screen and (max-width: 390px) {
+	.text {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 740px) {
+	.next {
+		bottom: 20px;
+	}
+	.top {
+		height: 40%;
+	}
+	.bottom {
+		height: 50%;
+	}
+}
+@media only screen and (max-width: 378px) {
+	.text {
+		width: 90%;
+	}
+	.trash {
+		left: 30px;
+	}
+}
+@media only screen and (max-width: 360px) {
+	.handleft {
+		left: -40px;
+	}
+	.handright {
+		right: -20px;
+	}
+	.subtitle {
+		font-size: 14px;
+	}
+	.robot {
+		width: 100px!important;
+	}
+	.smoke {
+		width: 130px;
+		bottom: 50px;
+	}
+	.bottom {
+		height: 60%!important;
+	}
+}
+@media only screen and (max-height: 700px) {
+	.bottom {
+		height: 55%!important;
+	}
+	.subtitle {
+		width: 90%;
+	}
+}
+@media only screen and (max-width: 300px) {
+	.bottom {
+		height: 62%!important;
+	}
+	.question {
+		width: 50px;
+		top: 50px;
+		right: 50px;
+	}
+	.trash {
+		bottom: 130px;
+	}
+	.trees {
+		bottom: 100px;
+	}
+	.handright {
+		width: 200px!important;
+		bottom: 100px;
+	}
+	.handleft {
+		width: 200px!important;
+		left: -20px;
+	}
+}
